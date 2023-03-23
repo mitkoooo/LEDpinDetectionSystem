@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  height: 933px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 100px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 50;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.TitleLEDCAM {
+  border: none;
+  flex-shrink: 0;
+  width: auto; /* 234px */
+  height: auto; /* 19px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  position: relative;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  color: #00070ee7;
+  font-size: 72px;
+  letter-spacing: -3.8px;
+  line-height: 1.2;
+  text-align: center;
+}
+.faq {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content; /* 473px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 40px 100px 40px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 60;
+  border-radius: 0px 0px 0px 0px;
+}
+.main {
+  width: 1200px;
+  height: min-content; /* 1527px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: visible;
+  padding: 0px 0px 0px 0px;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  position: absolute;
+  border-radius: 0px 0px 0px 0px;
+}
+.button {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: min-content; /* 438px */
+  min-width: 30;
+  height: 42px;
+  display: grid;
+  box-shadow: 0px 0.7079948583634852px 0.7079948583634852px -0.625px rgba(0, 0, 0, 0.15), 0px 1.8096906216668867px 1.8096906216668867px -1.25px rgba(0, 0, 0, 0.14397), 0px 3.6205156475884093px 3.6205156475884093px -1.875px rgba(0, 0, 0, 0.13793), 0px 6.870631714892718px 6.870631714892718px -2.5px rgba(0, 0, 0, 0.1271), 0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
+  background-color: #222222;
+  overflow: visible;
+  opacity: 0.98;
+  position: relative;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  justify-content: center;
+  grid-auto-rows: minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  padding: 15px 15px 15px 15px;
+  gap: 8;
+  border-radius: 8px;
+}
+
