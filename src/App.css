@@ -117,4 +117,10 @@
   gap: 8;
   border-radius: 8px;
 }
+.parent-container{
+  display: grid; 
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr; 
+}
 
