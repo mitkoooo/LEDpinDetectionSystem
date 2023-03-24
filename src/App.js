@@ -116,14 +116,14 @@ function App() {
          Computer Science Coursework
         </div>
         <div className="TitleLEDCAM">The LED pin detection camera</div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="parent-container">
           <Webcam
            ref={webcamRef}
            muted={true}
            style={{
            flexShrink: 0,
-           width: 800,
-           height: 450,
+           width: 640,
+           height: 480,
            display: "block",
            overflow: "hidden",
            position: "relative",
@@ -134,7 +134,7 @@ function App() {
            deviceID: "1",
            }}
           />
-         <div style={{ position: "relative" }}>
+         <div style={{ position: "absolute" }}>
            <canvas
              ref={canvasRef}
              style={{
