@@ -7,6 +7,9 @@ import {
   StyledWebcam,
   StyledCanvas,
   StyledButton,
+  MainHeader,
+  CameraHeader,
+  WebcamDescription,
 } from "./styles";
 
 const LEDFeed = () => {
@@ -92,17 +95,17 @@ const LEDFeed = () => {
 
   return (
     <ContentWrapper>
-      <h1>Computer Science Coursework</h1>
-      <h2>The LED pin detection camera</h2>
-      {isCameraOn ? (
+      <MainHeader>Vadim Mitko — Computer Science Coursework “LED pin detecting camera”</MainHeader>
+      <CameraHeader>The LED pin detection camera</CameraHeader>
         <div>
+        {isCameraOn ? (
           <CameraCanvasWrapper>
             <StyledWebcam ref={webcamRef} muted={true} audio={false} />
             <StyledCanvas ref={canvasRef} />
           </CameraCanvasWrapper>
-          <p>The microscope feed</p>
+        ) : <CameraCanvasWrapper></CameraCanvasWrapper>}
+          <WebcamDescription>The microscope feed</WebcamDescription>
         </div>
-      ) : null}
       <StyledButton onClick={handleClick}>
         {isCameraOn ? "Close Detection" : "Open Detection"}
       </StyledButton>

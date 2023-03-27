@@ -10,13 +10,16 @@ export const ContentWrapper = styled.div`
 
 export const CameraCanvasWrapper = styled.div`
   position: relative;
-  background-color: red;
+  background-color: #22223b;
 
   width: 640px;
   height: 480px;
 
   border-radius: 20px;
   overflow: hidden;
+
+  margin-top: 25px;
+  border: 5px black solid;
 `;
 
 export const StyledWebcam = styled(Webcam)`
@@ -57,4 +60,25 @@ export const StyledButton = styled.button`
     0px 6.870631714892718px 6.870631714892718px -2.5px rgba(0, 0, 0, 0.1271),
     0px 13.644368889910274px 13.644368889910274px -3.125px rgba(0, 0, 0, 0.10452),
     0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
+  
+  transition: all 0.2s ease-in-out;
+  margin-top: 10px;
+`;
+
+export const MainHeader = styled.div`
+ font-color: gray;
+`;
+
+export const CameraHeader = styled.h2`
+ margin-top: 75px;
+`;
+
+export const WebcamDescription = styled.p`
+  font-size: 16px;
+  font-weight: 600;
+
+  color: gray;
+  text-align: center;
+
+  margin-top: 10px;
 `;
