@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; // Importing React and styled components from "./styles", meaning from the styles file in this folder
 import 
  { Wrapper,
    StyledAccordion,
@@ -7,6 +7,9 @@ import
  } 
 from "./styles";
 
+// Defining a functional component Guide that renders a Wrapper component containing a StyledHeader and a StyledAccordion component.
+// A StyledAccordion component is defined with three StyledAccordion.Item components, each having a unique eventKey. 
+// A BottomBlock component is rendered below the StyledAccordion component
 const Guide = () => {
   return (
    <Wrapper>
@@ -47,3 +50,6 @@ const Guide = () => {
 };
 
 export default Guide;
+
+
+

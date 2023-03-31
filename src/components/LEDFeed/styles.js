@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import Webcam from "react-webcam";
+import styled from "styled-components"; // Importing styled-components library
+import Webcam from "react-webcam"; // Importing Webcam from react-webcam library
 
+// A styled div container for the main content section of the application
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,6 +9,7 @@ export const ContentWrapper = styled.div`
   row-gap: 16px;
 `;
 
+// A styled div container that holds the webcam and the canvas(where the boxes are drawn)
 export const CameraCanvasWrapper = styled.div`
   position: relative;
   background-color: #22223b;
@@ -22,6 +24,7 @@ export const CameraCanvasWrapper = styled.div`
   border: 5px black solid;
 `;
 
+// A styled version of the Webcam component from the react-webcam library
 export const StyledWebcam = styled(Webcam)`
   position: absolute;
   top: 0;
@@ -30,6 +33,7 @@ export const StyledWebcam = styled(Webcam)`
   height: 100%;
 `;
 
+// A styled canvas element that is used to draw the output of the tensorflow model
 export const StyledCanvas = styled.canvas`
   position: absolute;
   top: 0;
@@ -38,6 +42,7 @@ export const StyledCanvas = styled.canvas`
   height: 100%;
 `;
 
+// A styled button that is used as a trigger to take activate the webcam
 export const StyledButton = styled.button`
   display: flex;
   align-items: center;
@@ -65,14 +70,16 @@ export const StyledButton = styled.button`
   margin-top: 10px;
 `;
 
+// A styled div container for the main header section of the application
 export const MainHeader = styled.div`
  font-color: gray;
 `;
 
+// A styled h2 element that serves as the header for the webcam.
 export const CameraHeader = styled.h2`
  margin-top: 75px;
 `;
-
+// A styled p element that provides the title of the webcam
 export const WebcamDescription = styled.p`
   font-size: 16px;
   font-weight: 600;
@@ -82,3 +89,9 @@ export const WebcamDescription = styled.p`
 
   margin-top: 10px;
 `;
+
+
+
+
+
+

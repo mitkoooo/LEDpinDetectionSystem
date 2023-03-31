@@ -1,6 +1,8 @@
-import React, { useRef, useEffect, useState } from "react";
-import * as tf from "@tensorflow/tfjs";
-import { drawRect } from "../../utils/canvas";
+import React, { useRef, useEffect, useState } from "react"; // Import React library, including the `useRef`, `useEffect`, and `useState` hook
+import * as tf from "@tensorflow/tfjs"; // Import the TensorFlow.js library
+import { drawRect } from "../../utils/canvas"; // Import the `drawRect` function from a utility file of canvas component
+
+// Import several styled components from "styles" file
 import {
   ContentWrapper,
   CameraCanvasWrapper,
@@ -12,12 +14,19 @@ import {
   WebcamDescription,
 } from "./styles";
 
+// Define a React functional component called `LEDFeed`
 const LEDFeed = () => {
+
+  // Create a reference to the webcam element
   const webcamRef = useRef(null);
+
+  // Create a reference to the canvas element
   const canvasRef = useRef(null);
 
+  // Set up a state variable to track whether the camera is currently on or off
   const [isCameraOn, setIsCameraOn] = useState(false);
 
+  // Define a function that toggles the `isCameraOn` state when called
   function handleClick() {
     setIsCameraOn((curState) => !curState);
   }
@@ -43,35 +52,35 @@ const LEDFeed = () => {
       webcamRef.current.video.readyState === 4 &&
       canvasRef.current !== null
     ) {
-      // Get Video Properties
+      // Get the video properties
       const video = webcamRef.current.video;
       const videoWidth = webcamRef.current.video.videoWidth;
       const videoHeight = webcamRef.current.video.videoHeight;
 
-      // Set video width
+      // Setting video width
       webcamRef.current.video.width = videoWidth;
       webcamRef.current.video.height = videoHeight;
 
-      // Set canvas height and width
+      // Setting Canvas height and width
       canvasRef.current.width = videoWidth;
       canvasRef.current.height = videoHeight;
 
-      // 4. TODO - Make Detections
+      // Make Detections
       const img = tf.browser.fromPixels(video);
       const resized = tf.image.resizeBilinear(img, [640, 480]);
       const casted = resized.cast("int32");
       const expanded = casted.expandDims(0);
       const obj = await net.executeAsync(expanded);
-
+      
       const boxes = await obj[0].array();
       const classes = await obj[2].array();
       const scores = await obj[5].array();
 
-      // Draw mesh
+      // Draw the mesh for the boxes to be detected
 
       const ctx = canvasRef.current.getContext("2d");
 
-      // 5. TODO - Update drawing utility
+      // Update drawing utility
       // drawSomething(obj, ctx)
       requestAnimationFrame(() => {
         drawRect(
@@ -93,6 +102,7 @@ const LEDFeed = () => {
     }
   };
 
+  //LEDFeed displays a camera view along with a button to open/close the LED pin detection, as well as some header and descriptive text elements.
   return (
     <ContentWrapper>
       <MainHeader>Vadim Mitko — Computer Science Coursework “LED pin detecting camera”</MainHeader>
@@ -114,3 +124,6 @@ const LEDFeed = () => {
 };
 
 export default LEDFeed;
+
+
+

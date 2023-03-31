@@ -1,4 +1,4 @@
-// Import dependencies
+// Import dependencies and components
 import React from "react";
 import Guide from "./components/Guide";
 import LEDFeed from "./components/LEDFeed";
@@ -13,3 +13,7 @@ function App() {
 }
 
 export default App;
+
+
+
+
